@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Promedio Estudiantes</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<header>
+	<h1>promedio {{estudiante}}</h1>
+	<a href="/vernotas">Ver notas</a>
+	{{#if sesion}}
+	<a href="/actualizar">Actualizar</a>
+	<form action="/salir" method="get">
+		<h3>{{nombre}}</h3>
+		<button type="submit">salir</button>
+	</form>
+	{{else}}
+	<form action="/ingresar" method="post">
+	<input type="text" name="usuario" placeholder="Nombre de usuario">
+	<input type="password" name="password" placeholder="Contraseña">
+	<button type="submit">ingresar</button>
+	</form>
+	{{/if}}
+</header>

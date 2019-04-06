@@ -1,0 +1,15 @@
+{{>header}}
+<p>
+	bienvenido a la pagina de inicio
+</p>
+<form action="/actualizar" method="post">
+	<input type="text" name="nombre" value="{{nombre}}">
+	<input type="number" name="matematicas" value="{{matematicas}}">
+	<input type="number" name="ingles" value="{{ingles}}">
+	<input type="number" name="programacion" value="{{programacion}}">
+	<button>Calcular</button>
+</form>
+
+
+
+{{>footer}}
